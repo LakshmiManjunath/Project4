@@ -1,0 +1,152 @@
+body{font-family:calibri;background:url("../images/ddd.png");}
+/*body#personal,body#professional,body#fitness{margin-top:-18px;}*/
+.container{
+	background-color:white;	
+	box-shadow: 0 0 5px #D4BFAA;
+	border:1px solid #75A3A3;
+	}
+	
+#about{margin-top:0px;padding-left:10px;}
+
+.login_signup ul{
+	list-style:none;
+	float:right;
+	padding-right:200px;
+	margin-bottom:0px;
+	}
+.login_signup ul li{display:inline;padding-left:20px;}
+.login_signup ul li a{
+	color:#333333;
+	font-weight:bold;
+	font-size:18px;
+	text-decoration:none;
+	padding-right:10px;padding-left:10px;
+	}	
+.login_signup ul li a:hover{
+	color:white;
+	padding-right:10px;padding-left:10px;
+	background-image:linear-gradient(#3E3E3E,white);
+	box-shadow: 0 0 5px #888;
+	}
+	
+img#main-logo{
+	padding-left:20px;
+	padding-top:10px;
+	}
+	
+#top-navigation ul{	
+	list-style:none;
+	margin-right:0px;
+	padding-left:500px;margin-top:-20px;
+	border-top:1px solid #C2A385;border-bottom:1px solid #C2A385;box-shadow: 0 0 20px #855C33;
+	
+	background-image:linear-gradient(#b11516,#C14445);}	
+#top-navigation ul li{
+	display: inline;
+	text-align:centre;
+	font-size:20px;
+	font-weight:bold;
+	padding-right:20px;
+	}
+#top-navigation ul li a{
+	text-decoration:none;
+	color:#754719;
+	padding-right:10px;padding-left:10px;
+	background-image:linear-gradient(#FFFFAD, white);
+	border:2px solid #FFFFAD;border-radius: 5px;
+	}	
+#top-navigation ul li a:hover{
+	color:white;
+	background-image:linear-gradient(#3E3E3E,white);
+	border:2px solid white;
+	padding-right:10px;padding-left:10px;}
+
+#footer{
+	font:calibri;font-weight:bold;font-size:20px;
+	background-color:#D6D6D6;box-shadow: 0 0 10px #696969;
+	padding-top:20px;
+	}
+#footer ul li{
+	display:inline;
+	padding-right:200px;
+	color:#b11516;font-family:cambria;}
+
+
+/*personal_day_book.blade.php*/
+
+#header-info{
+	
+	padding-bottom:5px;
+	background-image:linear-gradient(#FFFFAD, white);
+	}
+	
+.category-list{
+	margin-top:-18px;
+	border-right:1px solid white;
+	font-size:18px;
+	font-weight:bold;
+	}	
+.category-list ul {
+	text-align:center;
+	list-style:none;
+	padding-left:0px;
+	margin-right:0px;
+	border-top:1px solid #B89470;
+	background-color:white;
+}
+.category-list ul li{border-left:1px solid #B89470;border-right:1px solid #B89470;border-bottom:1px solid #B89470;background-image:linear-gradient(#b11516,#C14445);}
+.category-list ul li a{
+	text-decoration:none;
+	font-family: 'Poiret One', cursive;font-weight:bold;font-family:calibri;
+	color:#333333;
+	
+}
+.category-list a:hover{color:white;}
+
+/* Highlight */
+.category-list ul li#iamhere{background-image:linear-gradient(#FFFFAD, white);border:1px solid white;}
+.category-list ul li#iamhere a,
+.category-list ul li#iamhere a:link,
+.category-list ul li#iamhere a:visited,
+.category-list ul li#iamhere a:hover { color:#754719;}
+
+.username{color:#754719;font-size:19px;font-weight:bold;}
+
+textarea.editor{height:500px;}
+.current_date{color:#8F8F8A;font-size:16px;}
+.current_date,.username{float:right;padding-right:210px;}
+.current_date{clear:right;}
+	
+/***************** COMPARING TWO ENTRIES **************/
+
+.date-picker ul{margin-right:200px;margin-left:200px;}
+.date-picker ul li{list-style:none;display:inline;padding-right:20px;}
+.date-picker ul li label{
+	background-image:linear-gradient(#FFFFAD, white);
+	border:1px solid #808080;border-radius: 10px;
+	padding-left:10px;padding-right:10px;
+	font-family:calibri;font-weight:bold;font-size:18px;color:#333333;
+	}
+	
+.retrieve-button{margin-left:420px;margin-right:420px;}
+.display_data{
+	padding-top:20px;
+	margin-left:-110px;
+	width:1200px;
+	height:auto;}
+.display_data ul{
+	background-image:radial-gradient(#808080,white);
+	border:1px solid #808080;border-radius: 20px;
+	padding-left:10px;padding-right:10px;}
+.display_data ul li{list-style:none;display:inline}
+.display_data ul li div{
+	background-color:white;
+	border:1px solid grey;
+	width:750px;
+	height:200px;}
+.flash-message{
+	font-family:cambria;
+	background-color:#FFFF66;border-bottom:1px solid #CCCCB2;
+	position: absolute;top:0;
+	text-align:center;
+	width:100%;}
