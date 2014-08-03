@@ -6,7 +6,6 @@
 
 
 @section('content')
-
 <div  id="top-navigation" class="span-24 last">
 		<ul>
 				<li><a href="#">HOME</a></li>
@@ -19,7 +18,7 @@
 					@endif
 				</li>
 		</ul>	
-	</div>
+</div>
 <div id="login_signup">
 @if(!Auth::check())
 	<ul>
@@ -28,10 +27,10 @@
 	</ul>
 @endif
 </div>
-	 <div id="blocks" class="span-24 last">
-		<div id="div1"><a href="#">HOW TO USE</a></div>
-		<div id="div2"><a href="#">FEATURES</a></div>
-		<div id="div3"><a href="#">EDITOR USAGE</a></div>
-		<div id="div4"><a href="#">IMPLEMENTATION</a></div>
+	 <div id="slideShowImages">
+		<img src="../images/pencils/pencils.jpg" alt="Slide 1" />
+		<img src="../images/pencils/pencils-features.jpg" alt="Slide 2" />
+		<img src="../images/pencils/pencils-text-editor.jpg" alt="Slide 3" />  
+		<img src="../images/pencils/pencils-implementation.jpg" alt="Slide 4" />  
 	</div>
 @stop

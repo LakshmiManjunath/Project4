@@ -36,11 +36,11 @@
 
 	<div class = "date-picker span-24 last">
 		<ul>
-			<li><label>DAY1</label><input id="datepicker" type="text" name="user_date"></li>
-			<li><label>DAY2</label><input id="datepicker2" type="text" name="user_date2"></li>
+			<li><label>DAY1</label><input id="datepicker" type="text" name="user_date" @if($date_entered){{"value='$date_entered'";}} @endif></li>
+			<li><label>DAY2</label><input id="datepicker2" type="text" name="user_date2" @if($date_entered2){{"value='$date_entered2'";}} @endif></li>
 		</ul>
 		<input type="submit" value="RETRIEVE" class="retrieve-button">
-		<div id="display_data" style="display:none;">
+		<div id="display_data">
 			<div id="day1"><span style="color:#999999;text-decoration:underline;">{{$date1;}}</span><br>
 				<div>
 					<select id="sections" name="section_name_1"> 

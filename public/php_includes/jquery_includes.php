@@ -1,8 +1,10 @@
 	<!--  Reference to the minified jQuery library(local copy)  -->
 	<script src="js/jquery-1.11.0.min.js" type="text/javascript"> </script>
 	
-	 <!--  javascript tp highlight the navigations  -->
+	 <!--  javascript to highlight the navigations  -->
 	<script type="text/javascript" src="js/phighlightnavigation.js"> </script>
+	<!--  slide show  -->
+	<script src="js/slideshow/slideShow.js"></script>
 	
 	<!--  jQ plugin for text-editor  -->
 	<script src="js/text-editor/jquery-te-1.4.0.min.js" type="text/javascript"></script>
