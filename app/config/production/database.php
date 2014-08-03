@@ -22,8 +22,8 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'day_book',
-			'database'  => 'tunnel.pagodabox.com:3306',
+			'host'      => 'tunnel.pagodabox.com:3306',
+			'database'  => 'day_book',
 			'username'  => 'teresia',
 			'password'  => '1SIGBbfR',
 			'charset'   => 'utf8',
