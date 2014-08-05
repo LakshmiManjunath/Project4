@@ -22,7 +22,7 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'tunnel.pagodabox.com:3306',
+			'host'      => '127.0.0.1',
 			'database'  => 'day_book',
 			'username'  => 'teresia',
 			'password'  => '1SIGBbfR',
