@@ -34,7 +34,7 @@
 <!--------------------------------- FORM ----------------------------->
 {{ Form::open(array('url' => '/compare_entries', 'method' => 'POST','class'=>'form')) }}
 
-	<div class = "date-picker span-24 last">
+	<div class = "date-picker">
 		<ul>
 			<li><label>DAY1</label><input id="datepicker" type="text" name="user_date" @if($date_entered){{"value='$date_entered'";}} @endif></li>
 			<li><label>DAY2</label><input id="datepicker2" type="text" name="user_date2" @if($date_entered2){{"value='$date_entered2'";}} @endif></li>

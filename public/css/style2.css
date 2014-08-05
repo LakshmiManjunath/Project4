@@ -1,5 +1,70 @@
-.container{background-color:#8F8F8F;}
+.container{background-image:url(../images/bg.png);font-family: 'Source Sans Pro', sans-serif;}
 
-#top-navigation ul li a{border-top:1px solid #8F8F8F; }
+#login_signup ul{
+	list-style:none;
+	padding-right:270px;
+	float:right;
+	margin-top:-60px;}
+#login_signup ul li{display:inline;margin-left:50px;}
+#login_signup ul li a{
+	text-decoration:none;
+	padding-left:20px;
+	color:#9E9E9E;
+	border-top:1px solid #ffffff;
+	padding-left:20px;padding-right:20px;}
+#login_signup ul li a:hover{border-top:3px solid #ffffff;font-weight:bold;}
 
-#top-navigation ul li a:hover{border-top:2px solid #FFFFFF; }
+#top-navigation ul{	
+	list-style:none;
+	background-color:#191919;
+	padding-top:25px;
+	padding-bottom:25px;}
+#top-navigation ul li{
+	display: inline;
+	margin-right:50px;
+	color:white;}	 
+#top-navigation ul li a{
+	text-decoration:none;color:#9E9E9E;
+	border-top:1px solid #ffffff;
+	padding-left:20px;padding-right:20px;}
+#top-navigation ul li:first-of-type{
+	text-shadow: 1px 1px #ffffff;
+	margin-left:50px;padding-right:200px;
+	color:white;font-size:30px;}
+#top-navigation ul li a:hover{border-top:3px solid #ffffff;font-weight:bold; }
+
+	
+/*Fixing the footer section to the bottom of the page*/
+#footer{
+	height:120px;
+	margin-left:300px;margin-right:300px;
+	padding-top:2px;
+	background-color:#F4F4F4;font-family:calibri;}
+#footer ul {list-style:none;}
+#footer ul li {color:#B0B0B0;}
+#footer ul li a{text-decoration:none;color:#B0B0B0;}
+#footer ul li a:hover{text-decoration:underline;color:black;}
+#footer > ul > li{float:left;padding-right:80px;}
+
+
+div#app-name{margin-right:300px;margin-left:300px;padding-top:40px;}
+
+.infograph ul{
+	padding-top:20px;
+	list-style:none;
+	margin-left:45px;margin-right:45px;
+	height:300px;}
+
+.infograph> ul > li{float:left;}
+.infograph ul  li ul li:last-of-type{
+	padding-top:10px;margin-left:-40px;
+	font-size:18px;color:#808080;text-align:center;
+	width:200px;height:200px;}
+	
+.category-list ul{
+	list-style:none;padding-top:100px;padding-left:140px;}
+.category-list ul li{padding-bottom:10px;}
+.category-list ul li a{
+	text-decoration:none;
+	}
+.text_input{float:right;padding-right:300px;margin-top:-120px;}

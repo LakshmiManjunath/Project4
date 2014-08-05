@@ -34,7 +34,7 @@
 	<?php include('/php_includes/section_navigation.php'); ?>
 	
 	<!---------------- Text Area for Professional Entries ---------------->
-	<div class="span-18 last">
+	<div>
 		<textarea class="editor fitness" name="fitness_entry" autocomplete="off" value=""></textarea>
 	</div>
 

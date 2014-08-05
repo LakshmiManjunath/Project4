@@ -11,30 +11,18 @@
 
 <body id="personal">
 
-<div class="username">
-<!---------------------- User - Authentication ----------------------->
-			@if(Auth::check())
-			{{'Hi '.Auth::user()->first_name." ";}}
-				<a href='/logout'>Log out </a>	
-			@endif	
-</div>
-
 @section('content')
-
-	<!--------------------- Navigation - Bar -------------------------
-	Includes: HOME, DAY-BOOK Entries, Comparing Dates ---------------->
-	<?php include('/php_includes/top_navigation.php'); ?>
 
 <!--------------------------------- FORM ----------------------------->
 {{ Form::open(array('url' => '/personal_day_book', 'method' => 'POST','autocomplete' => 'off')) }}
-
+<div class="category-list">
 	<!--------------------- SECTIONS - NAVIGATION --------------------
 	Included: Personal Entry,Professional Entry, Fitness and ---------
 	 Miscellaneous Entries ------------------------------------------->
 	<?php include('/php_includes/section_navigation.php'); ?>
-
+</div>
 	<!---------------- Text Area for Professional Entries ---------------->
-	<div class="text_input span-18 last">
+	<div class="text_input">
 		<textarea class="editor personal" name="personal_entry" autocomplete="off" value=""></textarea>
 	</div>
 	

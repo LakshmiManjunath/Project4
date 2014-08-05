@@ -8,7 +8,7 @@
 			Day-Book
 		@show
 	</title>
-	<link href="css/style.css" type="text/css" rel="stylesheet">
+
 	<link href='http://fonts.googleapis.com/css?family=Marcellus+SC|Niconne|Federo|Allerta+Stencil' rel='stylesheet' type='text/css'>
 	<?php 
 		/** Including javascript files **/
@@ -39,29 +39,39 @@
 
 <div class="container"> 
 	<!-- Includes the project logo, which is displayed in all the pages of this app-->
-	<h1 id="header-info">DAY BOOK<img src="images/book.png"></h1>
+	
 
 @yield('body')	
 <!-- This tag delimits the content section-->
+<div  id="top-navigation">
+		<ul>
+				<li><a href="/">Day Book</a></li>
+				<li><a href="/personal_day_book">NEW ENTRIES</a></li>
+				<li><a href="/compare_entries">OLD ENTRIES</a></li>
+				<li id="username">
+					@if(Auth::check())
+						{{"Hi ".Auth::user()->first_name;}}
+						<a href='/logout'>Log out </a>	
+					@endif
+				</li>
+		</ul>	
+</div>
 @yield('content')
-<div id="footer" class="span-24 last">
+<div id="footer">
 	<ul>
 		<li>Day Book
 			<ul>
-				<li><a>How to User</a></li>
-				<li><a>Features</a></li>
-				<li><a>Editor Usage</a></li>
-				<li><a>Implementation</a></li>
+				<li><a href="#">How to Use</a>,<a href="#">Features</a><br><a href="#">Editor Usage</a><a href="#">Implementation</a></li>
 			</ul>
 		</li>
 		<li>About Us
 			<ul>
-				<li><a>Blog</a></li>
+				<li><a href="#">Blog</a></li>
 			</ul>
 		</li>
 		<li>Support
 			<ul>
-				<li><a>Contact Us</a></li>
+				<li><a href="#">Contact Us</a></li>
 			</ul>
 		</li>
 	</ul>
