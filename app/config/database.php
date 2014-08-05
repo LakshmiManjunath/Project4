@@ -54,10 +54,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'localhost',
+			'host'      => 'tunnel.pagodabox.com',
 			'database'  => 'day_book',
-			'username'  => 'root',
-			'password'  => 'root',
+			'username'  => 'teresia',
+			'password'  => '1SIGBbfR',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
