@@ -14,7 +14,6 @@
 	</ul>
 @endif
 </div>
-	 <div >
 		<div id="app-name">
 			<img src="../images/dottedl.png"><span class="app-name" style="font-size:40px;font-weight:bold;padding-left:20px;padding-right:20px;">DAY BOOK</span><img src="../images/dottedr.png">
 		</div>

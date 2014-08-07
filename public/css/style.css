@@ -1,117 +1,140 @@
-/*General styling to the <body> element*/
-body{margin-top:-20px;background:url("../images/bg3.jpg");}
-
-/*Styling to the blueprint division*/
-.container{box-shadow: 0 0 20px #855C33;min-height:700px;background-color:white;	}
-
-/*The site title and the background image*/
-h1#header-info{
-	padding:10px;
-	color:#4880FF;
-	font-family: 'Federo', sans-serif;
-	background:url('../images/Header-background/hbg.png');
-	padding-bottom:100px;	
-	}	
-h1#header-info img{padding-left:10px;margin-bottom:-10px;}
-
-/* The navigation bar:Home/Day Book/Compare entries*/
-#top-navigation ul{	
-	margin-top:-18px;margin-right:0px;
-	list-style:none;
-	background-image:linear-gradient(#A5BFFD,#C9D9FE);}
-#top-navigation ul li{
-	font-size:18px;font-family: 'Federo', sans-serif;
-	display: inline;
-	border-right:1px solid #F5E6FC;
-	padding-right:20px;padding-left:20px;}
-#top-navigation ul li a{
-	text-decoration:none;}
-#top-navigation ul li a:hover{
-	color:white;}
+/* Main DIV*/
+div.container{
+	background-image:url(../images/subtle-light.jpg);font-family: 'Source Sans Pro', sans-serif;
+	width:1350px;min-width:1350px;
+	overflow:scroll;}
 	
-/*Login and signup links*/
+/* FLASH MESSAGE */	
+div.flash-message{
+	text-align:center;width:100%;
+	background-color:#FFFF66;
+	border-bottom:1px solid #CCCCB2;
+	position: absolute;top:0;}
+
+/* CURRENT DATE */
+.current_date{float:right;padding-right:20px;margin-bottom:-100px;}
+
+/* View: login */
+div.log-in-div{
+	padding-left:20px;height:500px;}
+	
+/* View: login */	
+.sign-up-div{padding-left:20px;height:500px;}
+
+/* ERROR Message */
+div.error{color:#FF3333;}
+
+/* View: index */
+#login_signup{margin-top:-5px;margin-right:-30px;}
 #login_signup ul{
 	list-style:none;
+	padding-right:170px;
 	float:right;
-	margin-top:-10px;}
-#login_signup ul li{display:inline;padding-left:20px;}
+	margin-top:-60px;}
+#login_signup ul li{display:inline;}
 #login_signup ul li a{
-	font-family: 'Federo', sans-serif;
-	font-size:15px;
-	text-decoration:none;}
-#login_signup ul li a:hover{
-	color:black;}
+	text-decoration:none;
+	margin-right:50px;
+	color:#9E9E9E;
+	border-top:1px solid #ffffff;
+	padding-left:20px;padding-right:20px;}
+#login_signup ul li a:hover{border-top:3px solid #ffffff;font-weight:bold;}
 
-/*User name displayed in the index page*/	
-#username{
-	margin-left:370px;
-	color:white;
-	}
-
-
-/*Fixing the footer section to the bottom of the page*/
-#footer{
-	/*position: fixed;*/
-    bottom: 0;
-	width: 950px;
-	padding-top:10px;
-	background-color:#E4ECFE;
+/* TOP NAVIGATION: Day Book. OLD Entries. NEW Entries. LOGIN. SIGN UP */
+#top-navigation ul{	
+	list-style:none;
+	background-color:#191919;
+	padding-top:25px;
+	padding-bottom:25px;}
+#top-navigation ul li{
+	display: inline;
+	margin-right:50px;
+	color:white;}	 
+#top-navigation ul li a{
+	text-decoration:none;color:#9E9E9E;
+	border-top:1px solid #ffffff;
+	padding-left:20px;padding-right:20px;}
+#top-navigation ul li:first-of-type{
+	text-shadow: 1px 1px #ffffff;
+	margin-left:50px;padding-right:200px;
+	color:white;font-size:30px;}
+#top-navigation ul li a:hover{border-top:3px solid #ffffff;font-weight:bold; }
+#home-nav img{margin-bottom:-10px;}
 	
-	-moz-box-shadow: 0 0 5px #888;
-	-webkit-box-shadow: 0 0 5px#888;
-	box-shadow: 0 0 5px #888;}
+/* View: master */
+/* FOOTER */
+#footer{
+	height:120px;
+	padding-left:300px;padding-right:300px;
+	padding-top:2px;
+	background-color:#CCCCCC;font-family:calibri;}
 #footer ul {list-style:none;}
-#footer ul li {color:#B2B2B2;}
-#footer ul li a{text-decoration:none;color:#808080;}
+#footer ul li {color:#B0B0B0;}
+#footer ul li a{text-decoration:none;color:#8F8F8F;}
 #footer ul li a:hover{text-decoration:underline;color:black;}
 #footer > ul > li{float:left;padding-right:80px;}
 
-.category-list ul{list-style:none;margin-right:0px;margin-top:-17px;margin-left:-17px;text-align:center;}
+/* View: index */
+div#app-name{margin-right:300px;margin-left:300px;padding-top:40px;}
+
+/* View: index */
+.infograph ul{
+	padding-top:20px;
+	list-style:none;
+	margin-left:45px;margin-right:45px;
+	height:300px;}
+.infograph> ul > li{float:left;}
+.infograph ul  li ul li:last-of-type{
+	padding-top:10px;margin-left:-40px;
+	font-size:18px;color:#808080;text-align:center;
+	width:200px;height:200px;}
+
+/* View: personal. professional. fitness */
+.category-list{height:500px;}
+.category-list ul{
+	list-style:none;
+	padding-top:100px;}
 .category-list ul li{
-	background-image:linear-gradient(#A5BFFD,#C9D9FE);
-	border-bottom:1px solid #F5E6FC;
-	padding-bottom:5px;padding-top:5px;padding-left:10px;padding-right:10px;}
+	margin-left:150px;
+	padding-bottom:10px;}
 .category-list ul li a{
 	text-decoration:none;
-	font-family: 'Federo', sans-serif;font-size:14px;}
-.category-list ul li a:hover{color:white;}
-
-.category-list ul li#iamhere{background-image:linear-gradient(#E4ECFE, white);border:1px solid white;}
+	color:#303030;border-top:1px solid #333333;}
+.category-list ul li a:hover{
+	color:#303030;border-top:3px solid #333333;}
+.category-list ul li#iamhere a{color:#303030;border-top:3px solid #333333;}
 .category-list ul li#iamhere a,
 .category-list ul li#iamhere a:link,
 .category-list ul li#iamhere a:visited,
-.category-list ul li#iamhere a:hover { color:#754719;}
+.category-list ul li#iamhere a:hover { color:#808080}
 
-.date-picker ul{margin-right:240px;margin-left:240px;}
-.date-picker ul li{list-style:none;display:inline;padding-right:20px;}
+.description{padding-left:20px;}
+/* View: personal. professional. fitness */
+.text_input{float:right;padding-right:250px;margin-top:-120px;}
+#save_button{float:right;margin-right:180px;margin-top:-400px;}
+
+/* View: compare */
+.date-picker{min-height:500px;max-height:auto;}
+.date-picker ul{padding-top:20px;}
+.date-picker ul li{list-style:none;padding-top:10px;}
 .date-picker ul li label{
-	font-family: 'Federo', sans-serif;
-	padding-left:10px;padding-right:10px;padding-top:5px;padding-bottom:5px;
 	background-image:linear-gradient(#C1C1C1, #E8E8E8);
-	border-bottom:#fff 1px solid;}
+	border-bottom:#fff 1px solid;padding:5px 10px;}
 .retrieve-button{
-	margin-left:420px;margin-right:420px;
-	font-family: 'Federo', sans-serif;
-	background-image:linear-gradient(#C1C1C1, #E8E8E8);}
-.retrieve-button:hover{color:#FF6666;}
-
-div#display_data{
-	width:865px;margin-top:20px;margin-left:30px;margin-right:30px;padding-bottom:350px;
-	background-image:radial-gradient(#8499CA,#C9D9FE);border:1px solid #B2B2B2;
-	font-family: 'Federo', sans-serif;}
+	background-image:linear-gradient(#C1C1C1, #E8E8E8);
+	margin-left:40px;}
+/* View: compare */
+/* Display Entries for matching date */
+.sections{float:right;margin-left:300px;margin-right:-100px;margin-top:-20px;}
+#display_data{margin-left:200px;margin-right:200px;padding-top:50px;}	
 #display_data div{
-	box-shadow: 0 0 20px white;
-	margin-top:10px;float:left;
-	width:415px;min-width:415px;height:330px;
-	border:1px solid #DAE0EF;background-color:white;overflow:scroll;}
-#display_data #day1{margin-left:10px;margin-right:10px;}
-#display_data #day2{margin-right:10px;}
+	float:left;
+	padding-right:100px;
+	background-color:white;}
+#display_data >div{
+	border:1px solid grey;
+	width:320px;min-width:320px;
+	height:300px;min-height:300px;
+	overflow:scroll;}
+#day1{margin-right:20px;}
 
-#display_data div div #sections{float:right;}
-
-.display{display:block;}
-
- div#slideShowImages { /* The following CSS rules are optional. */
-    margin-top:0px;margin-left:auto;margin-right:auto;
-    } 
-div#slideShowImages img{width:950px;height:600px;}	

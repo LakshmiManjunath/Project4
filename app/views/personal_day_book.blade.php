@@ -1,33 +1,39 @@
 @extends('_master')
 
+<!-- TITLE - NEW ENTRIES(Personal Section) -->
 @section('title')
 	{{Auth::user()->first_name}}_Personal_Day-Book
 @stop
 
-<!------------ Path to logic part of personal_day_book ------------>
-<?php $path = app_path().'/controllers/personal_day_book-logic.php';
-	require $path;
-?>
+@section('head')
+	<!-- LOGIC -->
+	<?php $path = app_path().'/controllers/personal_day_book-logic.php';
+		require $path;
+	?>
+@stop
 
+@section('body')
 <body id="personal">
-
+@stop
+	
 @section('content')
-
-<!--------------------------------- FORM ----------------------------->
 {{ Form::open(array('url' => '/personal_day_book', 'method' => 'POST','autocomplete' => 'off')) }}
-<div class="category-list">
-	<!--------------------- SECTIONS - NAVIGATION --------------------
-	Included: Personal Entry,Professional Entry, Fitness and ---------
-	 Miscellaneous Entries ------------------------------------------->
-	<?php include('/php_includes/section_navigation.php'); ?>
-</div>
-	<!---------------- Text Area for Professional Entries ---------------->
+	<p class="description"> + Different section <b>(<em> PERSONAL | PROFESSIONAL | FITNESS </em>)</b> provides data separation.<br>
+	+ <b>Text Editor features</b> include: Text formatting, Text Color, Strike through, add link, add horizontal rule..</p>
+	<!--SECTIONS - NAVIGATION -->
+	<div class="category-list">
+		<ul>
+			<li id="section_personal"><a href="/personal_day_book">PERSONAL</a></li>
+			<li id="section_professional"><a href="/professional_day_book">PROFESSIONAL</a></li>
+			<li id="section_fitness"><a href="/fitness_day_book">FITNESS</a></li>
+		</ul>
+	</div>
+	<!-- TEXT AREA (Personal-Entry) -->
 	<div class="text_input">
-		<textarea class="editor personal" name="personal_entry" autocomplete="off" value=""></textarea>
+		<textarea class="editor personal" name="personal_entry" autocomplete="off"></textarea>
 	</div>
 	
-	<!---------------------- Saving the FORM entries --------------------->
-	{{ Form::submit('Save') }}
+	{{ Form::submit('Save', $attributes = ['id' => 'save_button']) }}
 		
 {{ Form::close() }}
 @stop

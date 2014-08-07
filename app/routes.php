@@ -4,11 +4,6 @@
 |--------------------------------------------------------------------------
 | Application Routes
 |--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the Closure to execute when that URI is requested.
-|
 */
 
 Route::get('/get-environment',function() {
@@ -23,6 +18,7 @@ Route::get('/trigger-error',function() {
     $foo = new Foobar;
 
 });
+
 /*----------------------------------------
 *			Root definition
 *----------------------------------------*/
@@ -59,7 +55,26 @@ Route::post('/sign_up',
     array(
         'before' => 'csrf', 
         function() {
+			# Set validation rules for user information
+			$rules = array(
+				'first_name' => 'min:2|required',
+				'last_name' => 'min:2|required',
+				'email' => 'email|unique:users,email|required',
+				'password' => 'min:6|required'   
+			);          
+			# Validate the above set rules
+			$validator = Validator::make(Input::all(), $rules);
+			
+			# Check for validation
+			if($validator->fails()) {
 
+				return Redirect::to('/sign_up')
+								->with('flash_message', 'Sign up failed.Please try again!!')
+								->withInput()
+								->withErrors($validator);
+			}
+			
+			# Insert user information if the user input validates
             $user = new User;
 			$user->first_name    = Input::get('first_name');
 			$user->last_name    = Input::get('last_name');
@@ -80,11 +95,9 @@ Route::post('/sign_up',
 
             # Log the user in
             Auth::login($user);
-
+			
             return Redirect::to('/personal_day_book')->with('flash_message', 'Welcome to Day Book!');
-
-        }
-    )
+	})
 );
 
 /*----------------------------------------
@@ -96,8 +109,7 @@ Route::get('/login',
         function() {
             return View::make('login');
         }
-    )
-);
+));
 
 /*----------------------------------------
 *		Log In:Post Method
@@ -106,20 +118,39 @@ Route::post('/login',
     array(
         'before' => 'csrf', 
         function() {
+			
+			# Set validation rules for user information
+			$rules = array(
+				'email' => 'required',
+				'password' => 'required'   
+			);          
+			
+			# Validate the above set rules
+			$validator = Validator::make(Input::all(), $rules);
 
+			# Check for validation
+			if($validator->fails()) {
+
+				return Redirect::to('/login')
+								->with('flash_message', 'Log In failed.Please try again!!')
+								->withInput()
+								->withErrors($validator);
+			}
+			
             $credentials = Input::only('email', 'password');
-
+			
+			# Allow access if the user credentials match
             if (Auth::attempt($credentials, $remember = true)) {
                 return Redirect::intended('/personal_day_book')->with('flash_message', 'Welcome Back '.Auth::user()->first_name.'!!');
             }
+			# Redirect to login page ow
             else {
-                return Redirect::to('/login')->with('flash_message', 'Log in failed; please try again.');
+                return Redirect::to('/login')->with('flash_message', 'Log in failed; If you are a new user, sign up, or please try again with correct credentials.');
             }
 
             return Redirect::to('login');
         }
-    )
-);
+ ));
 
 /*----------------------------------------
 *				Log Out
@@ -146,19 +177,6 @@ Route::get('/personal_day_book', array('before'=>'auth', function() {
 *	Users Day Book-Entries for PERSONAL SECTION:POST Method
 *----------------------------------------------------------------*/		
 Route::post('/personal_day_book', array('before'=>'auth', function() {
-	/***********check**********/
-	
-	/*$path = app_path().'/controllers/personal_day_book-logic.php';
-	require $path;
-	
-	if ($entry->save())
-	{
-        return Redirect::intended('/personal_day_book')->with('flash_message', 'Successfully updated personal section');
-    }
-    else 
-	{
-        return Redirect::to('/personal_day_book')->with('flash_message', 'ERROR:Cannot update!');
-    }*/
 	
 	return View::make('personal_day_book');
 }));
@@ -197,57 +215,6 @@ Route::post('/fitness_day_book', array('before'=>'auth', function() {
 	return View::make('fitness_day_book');
 }));
 
-/*---------------------------------------------------------------
-*	Users Day Book-Entries for MISCELLANEOUS 
-*   SECTION:GET Method
-*----------------------------------------------------------------*/	
-Route::get('/misc_day_book', array('before'=>'auth', function() {
-
-	return View::make('misc_day_book');
-}));
-
-/*---------------------------------------------------------------
-*	Users Day Book-Entries for MISCELLANEOUS  SECTION:POST Method
-*----------------------------------------------------------------*/	
-Route::post('/misc_day_book', array('before'=>'auth', function() {
-	
-	//$user = new User();
-	$current_user_id = Auth::user()->id;
-	$misc = isset($_POST['misc_entry'])?$_POST['misc_entry']:' ';
-	if($misc)
-	{
-		$entry = new Entry();
-		$entry_exist = Entry::where('user_id','=',$current_user_id)->distinct()->first();
-		
-		if($entry_exist)
-		{
-					echo "match found";
-					$entry = new Entry();
-					$entry->user_id = $current_user_id;
-					
-					$entry = Entry::where('user_id','=',$current_user_id)
-									->first();
-					$entry->misc_entry = $entry->misc_entry." ".$misc;
-					$entry->save();
-		}
-		else
-		{
-					echo " new entry";
-					$entry = new Entry();
-					$entry->user_id = $current_user_id;
-					$entry->save();
-					$entry = Entry::where('user_id','=',$current_user_id)
-									->first();
-					date_default_timezone_set('America/New_York');
-					$entry->entry_date = date('Y-m-d');
-					$entry->misc_entry = $entry->misc_entry.' '.$misc;
-					$entry->save();
-		}
-	}
-	
-
-	return View::make('misc_day_book');
-}));
 
 /*----------------------------------------
 *		Compare Entries:GET Method

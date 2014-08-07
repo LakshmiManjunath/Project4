@@ -1,45 +1,40 @@
 @extends('_master')
 
+<!-- TITLE - NEW ENTRIES(Fitness Section) -->
 @section('title')
 	{{Auth::user()->first_name}}_Fitness_Day-Book
 @stop
 
-<!------------ Path to logic part of fitness_day_book ------------>
-<?php $path = app_path().'/controllers/fitness_day_book-logic.php';
-	require $path;
-?>
+@section('head')
+	<!-- LOGIC -->
+	<?php $path = app_path().'/controllers/fitness_day_book-logic.php';
+		require $path;
+	?>
+@stop
 
+@section('body')
 <body id="fitness">
-
-<div class="username">
-<!---------------------- User - Authentication ----------------------->
-	@if(Auth::check())
-		{{'Hi '.Auth::user()->first_name." ";}}
-		<a href='/logout'>Log out </a>	
-	@endif
-</div>
+@stop
 	
 @section('content')
-
-	<!--------------------- Navigation - Bar -------------------------
-	Includes: HOME, DAY-BOOK Entries, Comparing Dates ---------------->
-	<?php include('/php_includes/top_navigation.php'); ?>
-
-<!--------------------------------- FORM ----------------------------->
 {{ Form::open(array('url' => '/fitness_day_book', 'method' => 'POST')) }}
-
-	<!--------------------- SECTIONS - NAVIGATION --------------------
-	Includes: Personal Entry,Professional Entry, Fitness and ---------
-	 Miscellaneous Entries ------------------------------------------->
-	<?php include('/php_includes/section_navigation.php'); ?>
+	<p class="description"> + Different section <b>(<em> PERSONAL | PROFESSIONAL | FITNESS </em>)</b> provides data separation.<br>
+	+ <b>Text Editor features</b> include: Text formatting, Text Color, Strike through, add link, add horizontal rule..</p>
+	<!--SECTIONS - NAVIGATION -->
+	<div class="category-list">
+		<ul>
+			<li id="section_personal"><a href="/personal_day_book">PERSONAL</a></li>
+			<li id="section_professional"><a href="/professional_day_book">PROFESSIONAL</a></li>
+			<li id="section_fitness"><a href="/fitness_day_book">FITNESS</a></li>
+		</ul>
+	</div>
 	
-	<!---------------- Text Area for Professional Entries ---------------->
-	<div>
-		<textarea class="editor fitness" name="fitness_entry" autocomplete="off" value=""></textarea>
+	<!-- TEXT AREA (Fitness-Entry) -->
+	<div class="text_input">
+		<textarea class="editor fitness" name="fitness_entry" autocomplete="off" ></textarea>
 	</div>
 
-	<!------------------------- Closing the FORM ------------------------->	
-	{{ Form::submit('Save') }}
+	{{ Form::submit('Save', $attributes = ['id' => 'save_button']) }}
 	
 {{ Form::close() }}	
 @stop
