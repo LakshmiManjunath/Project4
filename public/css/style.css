@@ -132,7 +132,7 @@ div#app-name{margin-right:300px;margin-left:300px;padding-top:40px;}
 	padding-right:100px;
 	background-color:white;}
 #display_data >div{
-	border:1px solid grey;
+	border:1px solid #D6D6C2;
 	width:320px;min-width:320px;
 	height:300px;min-height:300px;
 	overflow:scroll;}
