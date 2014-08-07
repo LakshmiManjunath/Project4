@@ -31,7 +31,7 @@
 	
 	<!-- TEXT AREA (Professional-Entry) -->
 	<div class="text_input">
-		<textarea class="editor professional" name="professional_entry" autocomplete="off" value=""></textarea>
+		<textarea class="editor professional" name="professional_entry" autocomplete="off"></textarea>
 	</div>
 
 	{{ Form::submit('Save', $attributes = ['id' => 'save_button']) }}
