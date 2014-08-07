@@ -30,7 +30,7 @@
 	</div>
 	<!-- TEXT AREA (Personal-Entry) -->
 	<div class="text_input">
-		<textarea class="editor personal" name="personal_entry" autocomplete="off"></textarea>
+		<textarea class="editor personal" name="personal_entry" ></textarea>
 	</div>
 	
 	{{ Form::submit('Save', $attributes = ['id' => 'save_button']) }}
