@@ -39,8 +39,6 @@
 		<input type="submit" value="RETRIEVE" class="retrieve-button">
 
 		<div id="display_data">
-		<!-- if date1 exist -->
-			
 			<div id="day1"><span style="color:#999999;text-decoration:underline;">{{$date1;}}</span><br>
 				<!--  CHOOSE SECTIONS -->
 				<select class="sections" name="section_name_1"> 
@@ -52,8 +50,6 @@
 				{{$entry;}}<br>	
 			</div >
 			
-			<!-- if date2 exist -->
-			@if($date_entered2)
 			<div id="day2"><span style="color:#999999;text-decoration:underline;">{{$date2;}}</span><br>
 				<!--  CHOOSE SECTIONS -->
 				<select class="sections" name="section_name_2"> 
@@ -64,7 +60,6 @@
 				<!--  Display Entry for date2 -->
 				{{$entry_2;}}<br>
 			</div>
-			@endif
 		</div>
 	</div>
 {{ Form::close() }}

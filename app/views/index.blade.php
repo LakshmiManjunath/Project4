@@ -35,7 +35,7 @@
 					<ul>
 						<li><img src="../images/editor.png"></li>
 						<li><span style="font-weight:bold;font-size:22px;">Editor Usage</span><br>
-						It allows users to format text using different styles. Allows users to include horizontal ruler and include links.</li>
+						It allows users to format text using different styles. Allows users to include horizontal ruler and links.</li>
 					</ul>
 				<li>
 					<ul>
