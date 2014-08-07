@@ -24,8 +24,9 @@
 	<script type="text/javascript">
 		$(document).ready(function(){
 		
-	<!--  Trigger Date Picker -->
-    $( "#datepicker" ).datepicker();
+	<!-- jQuery - Date Picker Widget -->
+	$( "#datepicker" ).datepicker();
+	$( "#datepicker2" ).datepicker();
 	
 	<!--  Trigger Text Editor -->
 	$(".editor").jqte({titletext:[

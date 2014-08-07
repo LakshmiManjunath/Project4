@@ -6,14 +6,6 @@
 @stop
 
 @section('head')
-	<!-- jQuery - Date Picker Widget -->
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$( "#datepicker" ).datepicker();
-			$( "#datepicker2" ).datepicker();
-	});
-	</script>
-
 	<!-- LOGIC -->
 	<?php $path = app_path().'/controllers/compare_entries-logic.php';
 		require $path;
