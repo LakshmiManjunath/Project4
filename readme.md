@@ -14,4 +14,4 @@ Outside Source
   - textEditor jQuery widget <http://jqueryte.com/>
 
 
-<b>NOTE:</b> Since I had gone ahead and used the controllers in a non-conventional way, I had end up submitting the project as it is. I would follow the convention and rearrange my logic soon after the project evaluation..
+<b>NOTE:</b> Since I had gone ahead and used the controllers in a non-conventional way, I had to submit the project as it is. I would follow the convention and rearrange my logic soon after the project evaluation..
