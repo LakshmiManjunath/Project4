@@ -15,6 +15,5 @@ Outside Source
 
 
 <b>NOTE:</b> 
-  1)  Since I had gone ahead and used the controllers in a non-conventional way, I had to submit the project as it is. I would follow the convention and rearrange my logic soon after the project evaluation.
-  
-  2)  Also the views: personal.blade.php, professional.blade.php and fitness.blade.php include the external resource: jQ widget <b>textEditor</b>, and these files throughs validator errors. After inspecting I would like to mention that the html validator errors are from jQ textEditor.
+  Since I had gone ahead and used the controllers in a non-conventional way, I had to submit the project as it is. I would follow the convention and rearrange my logic soon after the project evaluation.
+ 
