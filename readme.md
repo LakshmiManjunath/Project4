@@ -9,5 +9,6 @@ Description: <b>Day Book</b>
   - the compare feature allows users to conveniently gauge their fitness & savings(by choosing different sections) improvements over months.. 
 
 Outside Source
+  - Laravel Framework
   - datepicker jQuery Widget <http://jqueryui.com/datepicker/>
   - textEditor jQuery widget <http://jqueryte.com/>
