@@ -94,7 +94,7 @@
 	<!-- TOP NAVIGATION -->
 	<div  id="top-navigation">
 			<ul>
-					<li><a id= "home-nav" href="/"><img src= "../images/day_book.png"></a></li>
+					<li><a id= "home-nav" href="/"><img src= "../images/day_book.png" alt="day_book"></a></li>
 					<li><a href="/personal_day_book">NEW ENTRIES</a></li>
 					<li><a href="/compare_entries">OLD ENTRIES</a></li>
 					<li id="username">
